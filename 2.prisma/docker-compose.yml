@@ -1,0 +1,19 @@
+version: "3.8"
+
+volumes:
+  next-with-nest:
+
+services:
+  mariadb:
+    image: mariadb:10.5.19
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpw
+      MYSQL_DATABASE: my_db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpw
+    volumes:
+      - next-with-nest:/var/lib/mysql
+    ports:
+      - 3306:3306
