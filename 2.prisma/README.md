@@ -7,7 +7,7 @@
 ### 1. git clone
 
 ```bash
-git clone ttps://github.com/wlstn4115/next-with-nest.git
+git clone https://github.com/wlstn4115/next-with-nest.git
 ```
 
 ### 2. 라이브러리 설치
