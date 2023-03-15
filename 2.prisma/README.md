@@ -4,29 +4,34 @@
 
 ## Getting Started
 
-### 1. git clone
+### 1. 라이브러리 설치
 
 ```bash
-git clone https://github.com/wlstn4115/next-with-nest.git
-```
-
-### 2. 라이브러리 설치
-
-```bash
-cd 2.prisma
 npm install
 ```
 
-### 3. 도커 컨테이너 실행
+### 2. 도커 컨테이너 실행
 
 ```bash
 docker-compose up -d
 ```
 
-### 4. prisma init
+### 3. .env.example 파일 .env 파일로 이름 변경
+
+```javascript
+DATABASE_URL = "mysql://root:rootpw@localhost:3306/my_db";
+```
+
+### 4. prisma migrate
 
 ```bash
-npx prisma init --datasource-provider mysql
+npx prisma migrate dev --name init
+```
+
+### 5. Run application
+
+```bash
+npm run dev
 ```
 
 ## 기술스택
